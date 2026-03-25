@@ -2,48 +2,71 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+
+use Laravel\Sanctum\HasApiTokens;
+
+
+
+
 class User extends Authenticatable
 {
-    /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    protected $primaryKey = 'id'; // ستون اصلی
+    public $incrementing = true;
+    protected $keyType = 'int';
+
     protected $fillable = [
-        'name',
+        'firstName',
+        'lastName',
+        'phone',
         'email',
-        'password',
+        'userImage',
+        'backgroundImage',
+        'userPassword',
+        'distrectId',
+        'role',
+        'verified'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['userPassword'];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    public function getAuthPassword()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->userPassword;
+    }
+    // روابط
+    public function company()
+    {
+        return $this->hasOne(UserCompany::class, 'userId');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'userId');
+    }
+
+    public function messages()
+    {
+        return $this->hasMany(UserCustomerMessage::class, 'userId');
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class, 'userId');
+    }
+
+    public function subscriptions()
+    {
+        return $this->hasMany(SellerSubscription::class, 'userId');
+    }
+
+    public function postViews()
+    {
+        return $this->hasMany(PostView::class, 'userId');
     }
 }

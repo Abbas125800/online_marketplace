@@ -4,3 +4,10 @@ vendor/
 .env.*
 /public/storage
 /storage/*.key
+
+
+# composer require laravel/sanctum
+# php artisan config:publish cors
+# npm create vite@latest frontend
+# npm install axios
+# 
