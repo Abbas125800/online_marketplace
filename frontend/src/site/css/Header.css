@@ -1,26 +1,103 @@
-
 .header {
   width: 100%;
   height: 350px;
-  background-image: url('../../assets/images/min-bacground.png'); /* خاکستری */
+  background-image: url("../../assets/images/min-bacground.png"); /* تصویر پس‌زمینه */
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white; /* متن سفید پیش‌فرض */
 }
 
-.signUp {
-    background-color: #FF9A68;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    margin-left: 4px;
-    padding: 6px 20px;
-    font-size: 18px;
+/* لوگو در سمت چپ */
+#leftMenu .logoShop {
+  margin: 20px;
+  height: 50px; /* ارتفاع مناسب لوگو */
+  width: auto;
+}
 
+/* دکمه ثبت‌نام */
+#signUpBtn {
+  background-color: #ff9a68;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  /*boldاستاندارد*/cursor: pointer;
+  transition: background 0.3s ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.signUp:hover {
+  background-color: #e58955; /* کمی تیره‌تر هنگام هاور */
+}
+
+/* دکمه ورود */
+#signInBtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  /* padding: 4px 16px; */
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#signInBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* تغییر کمی در هاور */
+}
+
+/* دکمه انتخاب زبان */
+#selectLang {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#selectLang:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Input جستجو */
+#searchInput {
+  width: 250px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+#chooseLocation {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+#chooseLocation p,  #chooseLocation span{
+margin: 0;
+padding: 0;
+}
+/* responsive */
+@media (max-width: 768px) {
+  #searchInput {
+    width: 150px;
+  }
+  #leftMenu,
+  #rightMenu {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
