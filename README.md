@@ -37,7 +37,6 @@
 # تغیرات خودی مین یعنی پروژه اصلی رابگیری
 
 # git pull origin main
-
 # برای ساخت برنچ برای خودت یا دیگران
 
 # git checkout -b mehdi branch or every name do you want
