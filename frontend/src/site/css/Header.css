@@ -101,3 +101,56 @@ padding: 0;
     gap: 0.5rem;
   }
 }
+
+
+/* استایل مربوط مینوی اصلی
+ */
+
+ ul#myTab button {
+  color: #fff;
+  font-size: 24px;
+  ;
+ }
+
+  ul#myTab button:hover, ul#myTab button:focus {
+    border: none;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: black;
+    background-color: transparent;
+    /* background-color: var(--bs-nav-tabs-link-active-bg); */
+    /* border-color: var(--bs-nav-tabs-link-active-border-color); */
+}
+
+.nav-tabs .nav-link,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* style for when clike on tab menu then background changes */
+/* .ChangeBackground {
+  background-color:  #F6EFED;
+  color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+} */
+
+.bg-change {
+  background: #F6EFED !important;
+  background-image: none !important;
+}
+
+.bg-change * {
+  color: black !important;
+}
+.bg-change img{
+  color: red !important;
+}
