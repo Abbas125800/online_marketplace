@@ -11,7 +11,7 @@ class UserCompany extends Model
 
     protected $primaryKey = 'sellerCompanyId';
 
-    protected $fillable = ['userId', 'name', 'distrectId', 'location', 'logo', 'description'];
+    protected $fillable = ['userId', 'name', 'districtId', 'location', 'logo', 'description'];
 
     public function user()
     {
@@ -20,6 +20,6 @@ class UserCompany extends Model
 
     public function district()
     {
-        return $this->belongsTo(Distrects::class, 'distrectId');
+        return $this->belongsTo(Districts::class, 'districtId');
     }
 }

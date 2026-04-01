@@ -13,12 +13,14 @@ class CreateUsersTable extends Migration
             $table->string('firstName', 100);
             $table->string('lastName', 100)->nullable();
             $table->string('phone', 16)->unique()->nullable();
-            $table->string('email', 128)->unique()->nullable();
+            $table->string('email', 128)->unique();
+            $table->string('identityNumber', 15)->nullable();
+            $table->text('location')->nullable();
             $table->string('userImage')->nullable();
             $table->string('backgroundImage')->nullable();
-            $table->string('userPassword');
-            $table->foreignId('distrectId')->constrained('distrects')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->enum('role', ['admin', 'vendor'])->default('vendor');
+            $table->string('Password');
+            $table->foreignId('district_Id')->constrained('districts')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->enum('role', ['admin', 'vendor', 'customer'])->default('vendor');
             $table->boolean('verified')->default(false);
             $table->timestamps();
         });

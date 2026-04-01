@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Distrects extends Model
+class Districts extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'distrectId';
+    protected $primaryKey = 'districtId';
 
     protected $fillable = [
         'districtName',
@@ -23,6 +23,6 @@ class Distrects extends Model
 
     public function companies()
     {
-        return $this->hasMany(UserCompany::class, 'distrectId');
+        return $this->hasMany(UserCompany::class, 'districtId');
     }
 }

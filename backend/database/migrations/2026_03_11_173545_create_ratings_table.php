@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('ratings', function (Blueprint $table) {
             $table->id(); // ratingId
             $table->foreignId('post_id')->constrained('posts')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('customer_id')->constrained('customers')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->tinyInteger('rating'); // 1 تا 5
             $table->text('review')->nullable();
             $table->timestamps();
         });
 
-      
+
     }
 
     /**

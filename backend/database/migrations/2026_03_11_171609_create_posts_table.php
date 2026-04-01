@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
-            $table->foreignId('categoryId')->nullable()->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('userId')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('category_Id')->nullable()->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_Id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2);
             $table->decimal('discount', 5, 2)->default(0);

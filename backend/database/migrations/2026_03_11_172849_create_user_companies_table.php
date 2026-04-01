@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('user_companies', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('userId')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_Id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name', 100);
-            $table->foreignId('distrectId')->constrained('distrects')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('district_Id')->constrained('districts')->cascadeOnDelete()->cascadeOnUpdate();
             $table->text('location');
             $table->string('logo')->nullable();
             $table->text('description')->nullable();

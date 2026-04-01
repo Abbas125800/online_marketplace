@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post_color', function (Blueprint $table) {
+        Schema::create('post_colors', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('postId')->constrained('posts')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('colorId')->constrained('colors')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('post_Id')->constrained('posts')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('color_Id')->constrained('colors')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('quantityColor')->default(0);
             $table->timestamps();
         });
