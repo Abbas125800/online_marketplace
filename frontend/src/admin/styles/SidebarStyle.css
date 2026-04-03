@@ -1,0 +1,44 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.596);
+  color: black;
+  padding: 20px;
+  position: fixed;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu {
+    align-items: start;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  text-align: start;
+  align-items: start;
+  width: 100%;
+  text-decoration: none;
+ color: black;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.item:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* لینک فعال */
+.active {
+  background: #055ce7fd;
+  color: #fff;
+}

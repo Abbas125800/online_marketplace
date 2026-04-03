@@ -40,3 +40,7 @@
 # برای ساخت برنچ برای خودت یا دیگران
 
 # git checkout -b mehdi branch or every name do you want
+
+
+
+<!-- این دستور برای -->

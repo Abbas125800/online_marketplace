@@ -1,0 +1,29 @@
+.AdminHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.search {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: end;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
