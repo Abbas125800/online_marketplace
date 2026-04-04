@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
-import fa from "../../locales/fa";
-import ps from "../../locales/ps";
-import en from "../../locales/en";
+import fa from "../../locales/lang/fa";
+import ps from "../../locales/lang/ps";
+import en from "../../locales/lang/en";
 
 
 const LangContext = createContext();
