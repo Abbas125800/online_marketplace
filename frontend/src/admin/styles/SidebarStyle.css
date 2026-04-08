@@ -1,8 +1,8 @@
 .sidebar {
   width: 220px;
   height: 100vh;
-  background: rgba(128, 128, 128, 0.596);
-  color: black;
+  background-color: var(--sidebarbg);
+  color: var(--text-primary);
   padding: 20px;
   position: fixed;
 }
@@ -14,8 +14,7 @@
 }
 
 .menu {
-    align-items: start;
-
+  align-items: start;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -26,19 +25,19 @@
   align-items: start;
   width: 100%;
   text-decoration: none;
- color: black;
+  color: var(--text-primary);
   padding: 10px;
   border-radius: 6px;
   transition: 0.3s;
 }
 
 .item:hover {
-  background: #3b82f6;
-  color: #fff;
+  background: var(--primary-hover);
+  color: var(--text);
 }
 
 /* لینک فعال */
 .active {
-  background: #055ce7fd;
-  color: #fff;
+  background: var(--primary);
+  color: var(--text);
 }

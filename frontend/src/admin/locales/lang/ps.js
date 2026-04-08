@@ -1,4 +1,11 @@
-const ps = {
+const ps = {    
+    back: "بیرته",
+    saveButton: "ذخیره",
+    errorSaveUserAlert: "د کارونکي د ثبتولو کې تېروتنه",
+saveUserAlert: "کاروونکی په بریالیتوب سره جوړ شو",
+loadingAlert: "په حال کې لېږل کېږي...",
+
+
     // ترجمه بخش هیدر
     dashboard: "ډشبورډ",
     searchPlaceholder: "...لټون",

@@ -1,4 +1,10 @@
 const en = {
+    back: "Back",
+    saveButton: "Save",
+  errorSaveUserAlert: "Error saving user",
+saveUserAlert: "User created successfully",
+loadingAlert: "Sending...",
+    
     // ترجمه بخش هیدر
     dashboard: "Dashboard",
     searchPlaceholder: "...Search",

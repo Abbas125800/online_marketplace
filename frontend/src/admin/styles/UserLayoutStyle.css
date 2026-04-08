@@ -1,4 +1,65 @@
-.container {
-   margin-right: 220px;
- 
+html[data-lang="fa"] .container,
+html[data-lang="ps"] .container {
+    direction: rtl;
+    margin-right: 220px;
+}
+
+html[data-lang="en"] .container {
+    direction: ltr;
+    margin-left: 220px;
+}
+
+
+.custom-table {
+  background: var(--background);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.custom-table thead {
+  background: var(--background);
+}
+.custom-table th {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.custom-table td {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.custom-table tbody tr:hover {
+  background: var(--row-hover);
+  transition: 0.2s;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.status {
+  font-size: 13px;
+  font-weight: 500;
+}
+.action-btn {
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 0 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-btn {
+  background: var(--warning);
+  color: var(--text);
+}
+.edit-btn:hover {
+  background: var(--accent);
+}
+.delete-btn {
+  background: var(--error);
+  color: var(--text);
+}
+.delete-btn:hover {
+  background: var(--error);
 }

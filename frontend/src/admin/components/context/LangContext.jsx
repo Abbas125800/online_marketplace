@@ -9,12 +9,18 @@ const LangContext = createContext();
 const translations = { fa, ps, en };
 
 export const LangProvider = ({ children }) => {
-  const [lang, setLang] = useState("fa");
-
+  const [lang, setLang] = useState(() => {
+    return localStorage.getItem("lang") || "fa";
+  });
+const changeLang = (newLang) => {
+  setLang(newLang);
+  localStorage.setItem("lang", newLang);
+};
   const t = (key) => translations[lang][key] || key;
 
   return (
-    <LangContext.Provider value={{ lang, setLang, t }}>
+    <LangContext.Provider value={{ lang, changeLang, t }}>
+      
       {children}
     </LangContext.Provider>
   );

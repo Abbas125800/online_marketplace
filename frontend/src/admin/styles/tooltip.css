@@ -1,0 +1,45 @@
+
+/* پایه tooltip */
+.action-btn {
+  position: relative;
+  cursor: pointer;
+}
+/* ::after نمایش tooltip */
+.action-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%; /* بالای دکمه */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+/* فلش کوچک پایین tooltip */
+.action-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #111827 transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* نمایش هنگام hover */
+.action-btn:hover::after,
+.action-btn:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
