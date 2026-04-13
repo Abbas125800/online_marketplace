@@ -5,8 +5,13 @@ vendor/
 /storage/*.key
 
 
+
+# backend
+# composer install
 # composer require laravel/sanctum
 # php artisan config:publish cors
+
+# frontend
 # npm create vite@latest frontend
 # npm install axios
 # 

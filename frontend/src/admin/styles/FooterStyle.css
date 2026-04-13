@@ -1,0 +1,16 @@
+html[data-lang="fa"] .footercontainer,
+html[data-lang="ps"] .footercontainer {
+    direction: rtl;
+    margin-right: 220px;
+}
+html[data-lang="en"] .footercontainer {
+    direction: ltr;
+    margin-left: 220px;
+}
+.footercontainer{
+    margin-top: 10px;  
+}
+.footer{
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}

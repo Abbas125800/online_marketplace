@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post_size', function (Blueprint $table) {
-            $table->foreignId('postId')->constrained('posts')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('sizeId')->constrained('sizes')->cascadeOnDelete()->cascadeOnUpdate();
+        Schema::create('post_sizes', function (Blueprint $table) {
+            $table->foreignId('post_Id')->constrained('posts')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('size_Id')->constrained('sizes')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('stock')->default(0);
-            $table->primary(['postId', 'sizeId']);
+            $table->primary(['post_Id', 'size_Id']);
             $table->timestamps();
         });
     }

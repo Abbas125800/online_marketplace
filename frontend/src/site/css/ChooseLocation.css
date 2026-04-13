@@ -1,0 +1,118 @@
+
+.ChooseFormContainer {
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.ChooseFormContainer h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+  text-align: start !important;
+}
+.ChooseFormContainer p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.btn.dropdown-toggle {
+  width: 100%;
+  background: #f5f5f5;
+  color: #222;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.dropdown-toggle:focus,
+.btn.dropdown-toggle:hover {
+  /* background: #e5e7eb; */
+  outline: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  min-width: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 10;
+  padding: 8px 0;
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  /* background: #f3f4f6; */
+  /* color: #007bff; */
+  outline: none;
+}
+
+.saveBtn {
+    background: #ff7b00;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+/* Scrollable dropdown menu after 200px, custom orange scrollbar */
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    /* existing styles... */
+}
+
+/* Custom scrollbar for dropdown-menu */
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+    background: #fff;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #ff7b00;
+    border-radius: 8px;
+}
+
+.dropdown-menu {
+    scrollbar-width: thin;
+    scrollbar-color: #ff7b00 #fff;
+}

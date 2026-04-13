@@ -28,7 +28,7 @@ class User extends Authenticatable
         'userImage',
         'backgroundImage',
         'userPassword',
-        'distrectId',
+        'district_Id',
         'role',
         'verified'
     ];

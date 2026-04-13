@@ -18,7 +18,7 @@ class DistrictSeeder extends Seeder
         $data = $this->districtList();
 
         // map province name -> id
-        $provinces = DB::table('provinces')->pluck('id', 'provinceName');
+        $provinces = DB::table('provinces')->pluck('id', 'Name');
 
         $rows = [];
         foreach ($data as $row) {
@@ -31,15 +31,15 @@ class DistrictSeeder extends Seeder
                 continue;
             }
             $rows[] = [
-                'districtName' => $dname,
-                'provinceId'   => $provinceId,
+                'Name' => $dname,
+                'province_Id'   => $provinceId,
             ];
         }
 
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        DB::table('distrects')->truncate();
+        DB::table('districts')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
-        DB::table('distrects')->insert($rows);
+        DB::table('districts')->insert($rows);
     }
 
     private function districtList(): array

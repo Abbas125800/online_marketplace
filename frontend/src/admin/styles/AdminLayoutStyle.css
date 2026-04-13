@@ -1,0 +1,16 @@
+
+html[data-lang="fa"],
+html[data-lang="ps"],
+html[data-lang="en"] {
+    background-color: var(--mainbg);
+    margin-top: 73px;
+}
+
+html[data-lang="fa"],
+html[data-lang="ps"] {
+    direction: rtl;
+}
+
+html[data-lang="en"] {
+    direction: ltr;
+}

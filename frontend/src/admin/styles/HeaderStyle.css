@@ -1,0 +1,54 @@
+@import "colors.css";
+
+
+html[data-lang="fa"] .AdminHeader,
+html[data-lang="ps"] .AdminHeader{
+    direction: ltr;
+}
+
+html[data-lang="en"] .AdminHeader {
+    direction: rtl;
+}
+html[data-lang="en"] select {
+   min-width: 100px;
+   text-align: left;
+}
+html[data-lang="fa"] select,
+html[data-lang="ps"] select {
+    min-width: 65px;
+}
+.AdminHeader {
+    width: 100%;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    top: 0;
+    position: fixed;
+    display: flex;  
+    z-index: 100;
+}
+
+.search {
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    text-align: end;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

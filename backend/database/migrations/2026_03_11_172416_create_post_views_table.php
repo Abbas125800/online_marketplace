@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('post_views', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('postId')->constrained('posts')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('userId')->nullable()->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignId('customerId')->nullable()->constrained('customers')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('post_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('ip_address')->nullable();
             $table->timestamps();
-            $table->unique(['postId', 'userId', 'customerId']);
         });
     }
 

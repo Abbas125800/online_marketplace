@@ -1,0 +1,239 @@
+.header {
+  width: 100%;
+  height: 350px;
+  background-image: url("../../assets/images/min-bacground.png"); /* تصویر پس‌زمینه */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white; /* متن سفید پیش‌فرض */
+}
+
+/* لوگو در سمت چپ */
+#leftMenu .logoShop {
+  margin: 20px;
+  height: 50px; /* ارتفاع مناسب لوگو */
+  width: auto;
+}
+
+/* دکمه ثبت‌نام */
+#signUpBtn {
+  background-color: #ff9a68;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  /*boldاستاندارد*/cursor: pointer;
+  transition: background 0.3s ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.signUp:hover {
+  background-color: #e58955; /* کمی تیره‌تر هنگام هاور */
+}
+
+/* دکمه ورود */
+#signInBtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  /* padding: 4px 16px; */
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#signInBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* تغییر کمی در هاور */
+}
+
+/* دکمه انتخاب زبان */
+#selectLang {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#selectLang:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Input جستجو */
+#searchInput {
+  width: 250px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+#chooseLocation {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+#chooseLocation p,  #chooseLocation span{
+margin: 0;
+padding: 0;
+}
+/* responsive */
+@media (max-width: 768px) {
+  #searchInput {
+    width: 150px;
+  }
+  #leftMenu,
+  #rightMenu {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+<<<<<<< HEAD
+
+/* استایل مربوط مینوی اصلی
+ */
+
+ ul#myTab button {
+  color: #fff;
+  font-size: 24px;
+  ;
+ }
+
+  ul#myTab button:hover, ul#myTab button:focus {
+    border: none;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: black;
+    background-color: transparent;
+    /* background-color: var(--bs-nav-tabs-link-active-bg); */
+    /* border-color: var(--bs-nav-tabs-link-active-border-color); */
+}
+
+.nav-tabs .nav-link,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* style for when clike on tab menu then background changes */
+/* .ChangeBackground {
+  background-color:  #F6EFED;
+  color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+} */
+
+.bg-change {
+  background: #F6EFED !important;
+  background-image: none !important;
+}
+
+.bg-change * {
+  color: black !important;
+}
+.bg-change img{
+  color: red !important;
+=======
+/* style modal for Header.jsx */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.auth-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* استایل مودال انتخاب زبان
+ */
+ /* مودال زیر دکمه */
+.language-modal {
+  position: absolute;
+  top: 15%;   /* زیر دکمه */
+  right: 15%;
+  width: 400px;
+  background: white;
+  border: 2px solid  #ff9a68;;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px;
+  z-index: 999;
+}
+
+/* دکمه بستن */
+.language-modal .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+ /* مودال زیر دکمه */
+.location-modal {
+  position: absolute;
+  top: 15%;   /* زیر دکمه */
+  left:8%;
+  width: 400px;
+  background: white;
+  border: 2px solid  #ff9a68;;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px;
+  z-index: 999;
+}
+
+/* دکمه بستن */
+.location-modal .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+>>>>>>> 8454719049bbdf9ba424bf28dc07193b10e21702
+}
